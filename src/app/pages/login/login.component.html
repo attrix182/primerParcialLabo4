@@ -1,0 +1,39 @@
+<div class="card-body" style="margin: 100px;">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Enter email"
+                [(ngModel)]="unUsuario.correo"
+              />
+              <div class="invalid-feedback" style="font-family: sans-serif;">
+    
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="Password"
+                [(ngModel)]="unUsuario.clave"
+              />
+              <div class="invalid-feedback" style="font-family: sans-serif;">
+
+              </div>
+            </div>
+        
+            <button type="submit"  class="btn btn-primary">
+              Submit
+            </button>
+            <br>
+            <button type="button" class="btn btn-danger" (click)="LoginRapido()">
+              Admin
+            </button>
+            <button type="button" class="btn btn-primary" (click)="LoginRapido()">
+                Empleado
+              </button>
+            </div>

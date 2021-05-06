@@ -7,17 +7,26 @@ import { AppComponent } from './app.component';
 import { BusquedaComponent } from './componentes/busqueda/busqueda.component';
 import { AngularFireModule } from '@angular/fire';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BienvenidaComponent } from './pages/bienvenida/bienvenida.component';
+import { LoginComponent } from './pages/login/login.component';
+import { AltaProductoComponent } from './pages/alta-producto/alta-producto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BusquedaComponent
+    BusquedaComponent,
+    BienvenidaComponent,
+    LoginComponent,
+    AltaProductoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    HttpClientModule
+    AngularFireModule.initializeApp(environment.firebase),
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
