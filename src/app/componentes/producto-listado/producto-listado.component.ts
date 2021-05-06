@@ -11,18 +11,22 @@ export class ProductoListadoComponent implements OnInit {
   
   @Input()  listadoProductos:Producto[];
 
-  @Output() peliculaSeleccionado: EventEmitter<any>= new EventEmitter<any>(); 
+  @Output() productoSeleccionado: EventEmitter<any>= new EventEmitter<any>(); 
 
-  listaPeliculas: any;
+  listaProductos: any;
 
   tamanioLista:Number;
 
-  constructor(private peliculaService: ProductoService) {     
-    this.peliculaService.getAll().subscribe(peliculas =>{  
-    this.listadoProductos=peliculas;
+  auxPais:string;
+
+  constructor(private prodSVC: ProductoService) {     
+    this.prodSVC.getAll().subscribe(productos =>{  
+    this.listadoProductos=productos;
     console.log( "a" + this.listadoProductos.length)
 
     this.tamanioLista =  this.listadoProductos.length
+
+  
 
   })
  }
@@ -33,7 +37,7 @@ export class ProductoListadoComponent implements OnInit {
   mostrarDetalles(parametroProducto)
   {
   	console.log(parametroProducto);
-    this.peliculaSeleccionado.emit(parametroProducto);
+    this.productoSeleccionado.emit(parametroProducto);
   }
 
 

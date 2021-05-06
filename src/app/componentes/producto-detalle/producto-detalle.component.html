@@ -6,7 +6,7 @@
       <div class="jumbotron">
         <div class="container">
           <h2 class="display-3">Listado</h2>
-          <app-producto-listado></app-producto-listado>
+          <app-producto-listado    (productoSeleccionado)="tomarProductoParaDetalles($event)" ></app-producto-listado>
 
 
         </div>
@@ -21,7 +21,7 @@
         <div class="row">
 
           <div class="col-md-4">
-
+            <app-detalle-producto [unProd]="prodParaMostar"></app-detalle-producto>
 
           </div>
 

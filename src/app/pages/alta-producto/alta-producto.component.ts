@@ -43,9 +43,9 @@ export class AltaProductoComponent implements OnInit {
 
     if(this.token == null)
     {
+   
 
-
-      location.assign('./bienvenida');
+      location.assign('bienvenida');
 
     }
     
@@ -61,7 +61,7 @@ export class AltaProductoComponent implements OnInit {
 
       console.log('se envio el Actor');
       console.log(this.unProducto);
-      location.assign('/altaProducto');
+      location.assign('/listadoProductos');
     })
 
   

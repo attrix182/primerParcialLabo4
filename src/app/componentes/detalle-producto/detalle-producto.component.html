@@ -1,1 +1,27 @@
-<p>detalle-producto works!</p>
+<div *ngIf="!unProd">
+    <p> Seleccione una Pelicula </p>
+  </div>
+  
+  
+  <div *ngIf="unProd">
+    <h2>{{unProd.descripcion}} </h2>
+    <div class="card bg-dark text-white" style="width:270px;">
+      <div class="card-body">
+  
+        <p class="card-text">
+            codigo: <b>{{unProd.codigo}}</b>
+            <br>
+            descripcion:  <b>{{unProd.descripcion}}</b>
+            <br>
+            precio:  <b>{{unProd.precio}} </b>
+            <br>
+            Cantidad de stock:  <b>{{unProd.stock}}</b>
+            <br>
+             paisOrigen:  <b>{{unProd.paisOrigen.name}}</b>
+            <br>
+          comestible:  <b>{{unProd.comestible}}</b>
+        </p>
+        <!-- <a href="#" class="btn btn-danger">Borrar</a> -->
+      </div>
+    </div>
+  </div>
