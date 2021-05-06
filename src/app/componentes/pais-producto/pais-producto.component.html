@@ -1,0 +1,20 @@
+<div *ngIf='detalleProd != null'>
+    <div class="container">
+  
+      <div>
+        <ul class="list-group-dark mb-3 card-body overflow-auto" style="height:auto;" #scrollMe [scrollTop]="scrollMe">
+  
+          <li type="text" class="list-group-item ">
+            <h3 style="color: black;">Pais</h3>
+            <div>
+                <h6>{{detalleProd.paisOrigen.name}}</h6>
+              <h6>{{detalleProd.paisOrigen.nativeName}}</h6>
+              <h6>{{detalleProd.paisOrigen.capital}}</h6>
+              <h6>{{detalleProd.paisOrigen.population}}</h6>
+              <img [src]="detalleProd.paisOrigen.flag" alt="bandera del pais" width="60px" height="40px" />
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>

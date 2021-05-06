@@ -8,11 +8,26 @@ import { Producto } from 'src/app/clases/producto';
 })
 export class ProductoDetalleComponent implements OnInit {
 
+  token: any;
   prodParaMostar:Producto;
 
   constructor() { }
 
   ngOnInit(): void {
+
+
+    this.token = localStorage.getItem('token');
+
+    console.log(this.token)
+
+    if(this.token == null)
+    {
+   
+
+      location.assign('bienvenida');
+
+    }
+    
   }
 
 

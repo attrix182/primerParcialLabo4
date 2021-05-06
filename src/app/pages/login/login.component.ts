@@ -17,13 +17,37 @@ export class LoginComponent implements OnInit {
   cargando: boolean;
 
 
-
+  aux:number;
 
   constructor(private servicioUsuario: UsuariofireService, private router: Router) { this.unUsuario = new Usuario(); this.loged = false; }
 
+token:any
+  ngOnInit(): void {
 
 
+    this.token = localStorage.getItem('token');
 
+    console.log(this.token)
+
+    if(this.token == null)
+    {
+   
+      this.aux = 0
+     
+
+    }
+    else {  this.aux = 1;// location.assign('bienvenida');}
+    
+  }
+}
+
+
+salir(){
+
+  localStorage.removeItem('token')
+  location.assign('usuario/login');
+
+}
 
   public LoginRapidoAdmin() {
     this.unUsuario.clave = '123456';
@@ -68,10 +92,5 @@ export class LoginComponent implements OnInit {
 
 
 
-  ngOnInit(): void {
-
-
-
-  }
 
 }

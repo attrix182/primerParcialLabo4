@@ -1,4 +1,4 @@
-<div class="card-body" style="margin: 100px;">
+<div class="card-body" style="margin: 100px;" *ngIf="aux == 0">
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
     <input type="email" class="form-control" id="email" placeholder="Enter email" [(ngModel)]="unUsuario.correo" />
@@ -29,4 +29,10 @@
     Empleado
   </button>
 </p>
+</div>
+
+<div class="card-body" style="margin: 100px;" *ngIf="aux != 0">
+  <h1 style="margin: auto; padding: auto;" >       YA ESTAS LOGEADO</h1>
+
+  <button class="btn btn-danger" (click)="salir()">CERRAR SESION</button>
 </div>
