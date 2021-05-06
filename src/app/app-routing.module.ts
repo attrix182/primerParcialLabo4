@@ -1,3 +1,4 @@
+import { AltaProductoComponent } from './pages/alta-producto/alta-producto.component';
 import { LoginComponent } from './pages/login/login.component';
 import { BienvenidaComponent } from './pages/bienvenida/bienvenida.component';
 import { BusquedaComponent } from './componentes/busqueda/busqueda.component';
@@ -6,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: 'bienvenida', component:  BienvenidaComponent},
+  { path: 'altaProducto', component:  AltaProductoComponent},
 
   {
   path: 'usuario',

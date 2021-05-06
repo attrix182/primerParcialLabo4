@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BienvenidaComponent } from './pages/bienvenida/bienvenida.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AltaProductoComponent } from './pages/alta-producto/alta-producto.component';
+import { ListadoPaisesComponent } from './componentes/listado-paises/listado-paises.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AltaProductoComponent } from './pages/alta-producto/alta-producto.compo
     BusquedaComponent,
     BienvenidaComponent,
     LoginComponent,
-    AltaProductoComponent
+    AltaProductoComponent,
+    ListadoPaisesComponent
   ],
   imports: [
     BrowserModule,

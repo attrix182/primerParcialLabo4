@@ -1,1 +1,100 @@
-<p>alta-producto works!</p>
+<body>
+
+
+
+
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-md-4 order-md-2 mb-4">
+
+<app-listado-paises  (paisSeleccionadoEvent)="cambiarPais($event)"> </app-listado-paises>
+
+            </div>
+
+            <div class="col-md-8 order-md-1">
+                <div>
+
+                        <div class="row">
+                            <div class="col-md-12 mb-5">
+                                <h2>Alta Actores</h2>
+                            </div>
+                        </div>
+
+                        <div class="row formulario">
+
+                            <div class="col-md-6 mb-3">
+                                <label for="nombre" class="form-label">Codigo</label>
+                                <input type="number" class="form-control" id="codigo" placeholder="Ingrese codigo"
+                               [(ngModel)]="unProducto.codigo">
+                  
+                            </div>
+
+
+                            <div class="col-md-6 mb-3">
+                                <label for="apellido" class="form-label">Descripcion</label>
+                                <input type="text" class="form-control" id="descripcion" placeholder="Ingrese descripcion"
+                                  [(ngModel)]="unProducto.descripcion">
+           
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="dni" class="form-label">Precio</label>
+                                <input type="number" class="form-control" id="precio" placeholder="Ingrese precio"
+                                [(ngModel)]="unProducto.precio">
+             
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="dni" class="form-label">Stock</label>
+                                <input type="number" class="form-control" id="stock" placeholder="Ingrese stock"
+                                  [(ngModel)]="unProducto.stock">
+             
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="apellido" class="form-label">Pais de origen</label>
+                                <input type="text" class="form-control" id="paisOrigen" placeholder="Ingrese paIS"
+                                [(ngModel)]="test">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="apellido" class="form-label">Comestible</label>
+                                <input type="checkbox" class="form-control" id="comestible" 
+                                [(ngModel)]="unProducto.comestible">
+                            </div>
+
+               
+
+
+                            <div *ngIf="!unPaisSeleccionado">
+                                <p> Seleccione un pais de la lista -></p>
+                            </div>
+
+                            <div class="card col-12" style="max-width: 280px; margin: auto;" *ngIf="unPaisSeleccionado">
+                                <br>
+                                <img  [src]="unPaisSeleccionado.flag" class="card-img-top" style="border: 2px solid black;" alt="image pais" />
+                                <div class="card-body">
+                                    <h5 class="card-title" >{{ unPaisSeleccionado.name }}</h5>
+                 
+                                </div>
+                            </div> 
+            
+
+                        </div>
+
+
+                        <div class="col-md-12 d-grid gap-2">
+                            <br>
+
+                      
+
+                            <button type="submit" class="btn btn-primary btn-block" (click)="crearProducto()" >
+                                Aceptar
+                            </button>
+
+
+
+                        </div>
+
+     

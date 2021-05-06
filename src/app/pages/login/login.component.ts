@@ -25,9 +25,16 @@ export class LoginComponent implements OnInit {
 
 
 
-  public LoginRapido() {
+  public LoginRapidoAdmin() {
     this.unUsuario.clave = '123456';
-    this.unUsuario.correo = "invitado@invitado.com";
+    this.unUsuario.correo = "admin@admin.com";
+
+  }
+
+
+  public LoginRapidoEmpleado() {
+    this.unUsuario.clave = '123456';
+    this.unUsuario.correo = "empleado@empleado.com";
 
   }
 
@@ -42,8 +49,9 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('token', this.unUsuario.correo)
 
         this.cargando = true;
-        this.router.navigateByUrl("home");
+        this.router.navigateByUrl("altaProducto");
         console.log('existe')
+        
       }
       else {
         //this.cargando = true;
