@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pplab4ls": {
+      "hosting": {
+        "practicaPPlab4": [
+          "pplab4ls"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pplab4ls"
+  }
+}
