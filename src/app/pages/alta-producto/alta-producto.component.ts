@@ -38,9 +38,14 @@ export class AltaProductoComponent implements OnInit {
 
 
     this.token = localStorage.getItem('token');
+
+    console.log(this.token)
+
     if(this.token == null)
     {
-      this.router.navigateByUrl("bienvenido");
+
+
+      location.assign('./bienvenida');
 
     }
     

@@ -12,6 +12,9 @@ import { BienvenidaComponent } from './pages/bienvenida/bienvenida.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AltaProductoComponent } from './pages/alta-producto/alta-producto.component';
 import { ListadoPaisesComponent } from './componentes/listado-paises/listado-paises.component';
+import { ProductoListadoComponent } from './componentes/producto-listado/producto-listado.component';
+import { DetalleProductoComponent } from './componentes/detalle-producto/detalle-producto.component';
+import { ProductoDetalleComponent } from './componentes/producto-detalle/producto-detalle.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { ListadoPaisesComponent } from './componentes/listado-paises/listado-pai
     BienvenidaComponent,
     LoginComponent,
     AltaProductoComponent,
-    ListadoPaisesComponent
+    ListadoPaisesComponent,
+    ProductoListadoComponent,
+    DetalleProductoComponent,
+    ProductoDetalleComponent
   ],
   imports: [
     BrowserModule,

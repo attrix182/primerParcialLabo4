@@ -1,3 +1,6 @@
+import { ProductoDetalleComponent } from './componentes/producto-detalle/producto-detalle.component';
+import { ProductoListadoComponent } from './componentes/producto-listado/producto-listado.component';
+import { ListadoPaisesComponent } from './componentes/listado-paises/listado-paises.component';
 import { AltaProductoComponent } from './pages/alta-producto/alta-producto.component';
 import { LoginComponent } from './pages/login/login.component';
 import { BienvenidaComponent } from './pages/bienvenida/bienvenida.component';
@@ -8,6 +11,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { path: 'bienvenida', component:  BienvenidaComponent},
   { path: 'altaProducto', component:  AltaProductoComponent},
+  { path: 'listadoProductos', component:  ProductoDetalleComponent},
 
   {
   path: 'usuario',

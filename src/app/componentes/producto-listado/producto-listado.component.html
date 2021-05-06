@@ -1,0 +1,29 @@
+
+<table border=1 class="table table-hover table-dark">
+    <thead>
+      
+      <th>Nombre</th>
+      <th>Tipo</th>
+      <th>Fecha</th>
+      <th>Publico</th>
+      <th>Foto</th>
+  
+      <th>
+        <div *ngIf="!tamanioLista">
+          <div class="spinner-border" role="status"></div>
+        </div>
+      </th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let uno of listadoProductos" app-fila-pelicula 
+        (peliculaSeleccionado)="mostrarDetalles($event)"  (click)="mostrarDetalles(uno)">
+        <td>{{uno.codigo}}</td>
+        <td>{{uno.descripcion}}</td>
+        <td>{{uno.precio}}</td>
+        <td>{{uno.stock}}</td>
+        <td>{{uno.paisOrigen}}</td>
+        <td>{{uno.comestible}}</td>
+        <td> <i     class="fa fa-check "></i></td>
+      </tr>
+    </tbody>
+  </table>
